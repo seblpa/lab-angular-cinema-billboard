@@ -1,0 +1,38 @@
+<p>
+  home works!
+</p>
+
+<!-- para acceder aquí a movieList en ngFor, debemos ir en home.component.ts, mirar Private y hacer 
+  getMovies()
+   -->
+
+
+<div class="container">
+  <div class="row" *ngFor="let movie of movieList">
+    <div>
+        <img [src]="movie.poster" alt="" style="width: 150px">
+    </div>
+    <div>
+      {{movie.title}}
+    </div>
+    <div>
+      {{movie.director}}
+    </div>
+    <div>
+        {{movie.synopsis}}
+      </div>
+      <div>
+        {{movie.genres}}
+      </div>
+      <div>
+          {{movie.actors}}
+        </div>
+        <div>
+          {{movie.year}}
+        </div>
+        <div>
+            {{movie.hours}}
+          </div>
+    <a [routerLink]="['/movie/' +movie.id]">Watch it</a>
+  </div>
+</div>
